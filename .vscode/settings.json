@@ -1,0 +1,12 @@
+{
+    "python.linting.pylintEnabled": true,
+    "python.pythonPath": "/Users/mitchellblom/.local/share/virtualenvs/levelup-VoTGg5_u/bin/python",
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "levelup-connection",
+            "database": "db.sqlite3"
+        }
+    ]
+}

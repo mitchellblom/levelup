@@ -1,0 +1,26 @@
+[
+    {
+        "model": "levelupapi.game",
+        "pk": 1,
+        "fields": {
+            "title": "Ticket to Ride",
+            "maker": "Cool Company",
+            "skill_level": 3,
+            "gamer": 1,
+            "game_type": 2,
+            "number_of_players": 4
+        }
+    },
+    {
+        "model": "levelupapi.game",
+        "pk": 2,
+        "fields": {
+            "title": "Code Names",
+            "maker": "Czech Games",
+            "skill_level": 2,
+            "gamer": 1,
+            "game_type": 2,
+            "number_of_players": 4
+        }
+    }
+]
