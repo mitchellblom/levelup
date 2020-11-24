@@ -16,3 +16,4 @@ class Game(models.Model):
         related_query_name="game"
     )
     number_of_players = models.IntegerField()
+
