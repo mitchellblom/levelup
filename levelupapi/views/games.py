@@ -36,7 +36,7 @@ class GamesViewSet(ViewSet):
         # whose `id` is what the client passed as the
         # `gameTypeId` in the body of the request.
         gametype = GameType.objects.get(pk=request.data["gameTypeId"])
-        game.gametype = gametype
+        game.game_type_id = gametype
 
         # Try to save the new game to the database, then
         # serialize the game instance as JSON, and send the
@@ -91,7 +91,7 @@ class GamesViewSet(ViewSet):
         game.gamer = gamer
 
         gametype = GameType.objects.get(pk=request.data["gameTypeId"])
-        game.gametype = gametype
+        game.game_type_id = gametype
         game.save()
 
         # 204 status code means everything worked but the
@@ -129,9 +129,9 @@ class GamesViewSet(ViewSet):
         #    http://localhost:8000/games?type=1
         #
         # That URL will retrieve all tabletop games
-        game_type = self.request.query_params.get('type', None)
-        if game_type is not None:
-            games = games.filter(gametype__id=game_type)
+        game_type_id = self.request.query_params.get('type', None)
+        if game_type_id is not None:
+            games = games.filter(gametype__id=game_type_id)
 
         serializer = GameSerializer(
             games, many=True, context={'request': request})
@@ -149,5 +149,5 @@ class GameSerializer(serializers.HyperlinkedModelSerializer):
             view_name='game',
             lookup_field='id'
         )
-        fields = ('id', 'url', 'title', 'maker', 'number_of_players', 'skill_level', 'gametype')
+        fields = ('id', 'url', 'title', 'maker', 'number_of_players', 'skill_level', 'game_type_id')
         depth = 1

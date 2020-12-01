@@ -1,35 +1,46 @@
 [
     {
-        "model": "levelupapi.event",
-        "pk": 1,
-        "fields": {
-            "organizer": 1,
-            "description": "Welcome To at lunch",
-            "game": 1,
-            "date": "2021-10-04",
-            "time": "12:00"
-        }
+        "id": 1,
+        "url": "http://localhost:8000/events/1",
+        "game": {
+            "title": "Welcome To"
+        },
+        "description": "Welcome To at lunch",
+        "date": "2021-10-04",
+        "time": "12:00:00",
+        "joined": false
     },
     {
-        "model": "levelupapi.event",
-        "pk": 2,
-        "fields": {
-            "organizer": 1,
-            "description": "Friday night Settlers and drinks",
-            "game": 2,
-            "date": "2021-08-14",
-            "time": "19:30"
-        }
+        "id": 2,
+        "url": "http://localhost:8000/events/2",
+        "game": {
+            "title": "Settlers of Catan",
+        },
+        "description": "Friday night Settlers and drinks",
+        "date": "2021-08-14",
+        "time": "19:30:00",
+        "joined": true
     },
     {
-        "model": "levelupapi.event",
-        "pk": 3,
-        "fields": {
-            "organizer": 1,
-            "description": "Vale of the Frost King campaign. All weekend.",
-            "game": 3,
-            "date": "2021-04-20",
-            "time": "8:00"
-        }
+        "id": 3,
+        "url": "http://localhost:8000/events/3",
+        "game": {
+            "title": "Dungeons & Dragons",
+        },
+        "description": "Vale of the Frost King campaign. All weekend.",
+        "date": "2021-04-20",
+        "time": "08:00:00",
+        "joined": false
+    },
+    {
+        "id": 10,
+        "url": "http://localhost:8000/events/10",
+        "game": {
+            "title": "Welcome To",
+        },
+        "description": "Lightning round welcome to session. Cards will be turned every minute. Drinking involved.",
+        "date": "2020-11-11",
+        "time": "17:30:00",
+        "joined": true
     }
 ]
