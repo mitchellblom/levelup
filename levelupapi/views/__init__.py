@@ -3,3 +3,4 @@ from .auth import register_user
 from .events import EventsViewSet
 from .game_types import GameTypesViewSet
 from .games import GamesViewSet
+from .profile import ProfileViewSet
